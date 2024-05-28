@@ -1,7 +1,15 @@
 fun countAlphabet(alphabet: String) : Int {
     var alphabetSet = mutableSetOf<String>()
-	  for (i in alphabet){
-        alphabetSet.add(i.toString())    
+    var newAlphabetSet = mutableSetOf<String>()
+    var sameAlphabet = ""
+    for (i in alphabet){
+        alphabetSet.add(i.toString().uppercase())
     }
-    return alphabetSet.size  
-countAlphabet("banana")
+
+    for (i in alphabetSet){
+        newAlphabetSet.add(i)
+    }
+    return newAlphabetSet.size
+}
+
+countAlphabet("appleAPPLE")
